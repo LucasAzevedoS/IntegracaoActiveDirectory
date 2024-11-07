@@ -33,30 +33,66 @@ Este projeto visa oferecer uma interface web amigável para facilitar o processo
 
 ## Sobre o Projeto
 
-Descreva em mais detalhes o propósito do projeto. Explique para quem ele é útil e por que foi criado.
+O **ActiveDirectory Interface** foi criado para agilizar os processos internos da empresa, especialmente nas tarefas de criação e desativação de usuários no Active Directory. Com uma interface web amigável e intuitiva, o projeto visa simplificar o trabalho da equipe de suporte, reduzindo o tempo e o esforço necessários para gerenciar usuários no sistema.
+
+Além de seu propósito funcional, o projeto serve como uma base de aprendizado abrangente, permitindo uma imersão completa em diversas etapas de desenvolvimento e infraestrutura. Estou envolvido desde o preparo do servidor e a criação das máquinas virtuais (VMs) até a configuração do ambiente Windows Server e GitLab, além do desenvolvimento e implementação do código em si. Esse processo tem sido fundamental para o aprimoramento de minhas habilidades em gestão de servidores e desenvolvimento full stack.
+
 
 ## Funcionalidades
 
-Liste as principais funcionalidades:
-- Exemplo: Cadastro de usuários no Active Directory
-- Exemplo: Gerenciamento de coleta seletiva de lixo
+- **Criação de Usuários**: Permite adicionar novos usuários ao Active Directory por meio de uma interface simplificada, facilitando o trabalho da equipe de suporte.
+- **Edição de Usuários**: Possibilita a atualização de informações de usuários ativos, garantindo que os dados estejam sempre corretos e atualizados.
+- **Listagem de Usuários**: Exibe uma lista de usuários registrados no Active Directory, facilitando a busca e consulta de informações.
+- **Desativação de Usuários (futura implementação)**: Planejada para facilitar o processo de desativação de usuários, agilizando o desligamento no sistema.
+- **Autenticação Segura**: Utiliza autenticação com NextAuth para garantir a segurança no acesso à aplicação.
+
 
 ## Tecnologias Utilizadas
 
-Liste as tecnologias principais:
-- **Back-end**: .NET, C#, Java com Spring Boot
-- **Front-end**: Next.js, React.js com Mantine
-- **Banco de Dados**: SQL Server, Flyway e Hibernate (Spring Boot)
-- Outros: Axios, autenticação básica, etc.
+- **Back-end**: 
+  - .NET 8, C#
+  - System.DirectoryServices para integração com Active Directory
+  
+- **Front-end**: 
+  - Next.js, React.js com Mantine
+  - TypeScript
+  
+- **Infraestrutura**:
+  - Configuração da ILO do servidor
+  - GitLab para controle de versão e CI/CD
+  - Vmware para virtualização
+  - Windows Server e Active Directory para gerenciamento de usuários
+
+- **Outros**:
+  - Axios para requisições HTTP
+  - NextAuth para autenticação segura
+
 
 ## Pré-requisitos
 
-Liste os pré-requisitos para executar o projeto:
-- Exemplo: .NET SDK, Node.js, Java JDK, etc.
+Antes de iniciar, certifique-se de ter as seguintes ferramentas e configurações:
+
+### Ambiente de Desenvolvimento
+- **.NET SDK (versão 8 ou superior)**: Para compilar e rodar o back-end em C#.
+- **Node.js (versão 18 ou superior)**: Para executar o ambiente de desenvolvimento do front-end em Next.js.
+- **JavaScript Package Manager**: npm ou yarn, para instalar as dependências do front-end.
+
+### Banco de Dados e Infraestrutura
+- **Active Directory**: Necessário para integração com o System.DirectoryServices.
+- **Servidor Windows e Vmware**: Configuração do ambiente para o Active Directory e virtualização (para ambiente de produção ou desenvolvimento replicável).
+
+### Ferramentas de Gerenciamento
+- **Git**: Para controle de versão do projeto.
+- **GitLab**: Para CI/CD, se houver integrações específicas configuradas.
+- **GitLab Runner**: Opcional, caso use pipelines de CI/CD.
+
+### Variáveis de Ambiente
+Certifique-se de definir as variáveis de ambiente necessárias:
+- **Conexão com o Active Directory**: Informações de conexão, como nome de usuário, senha e domínio.
+- **Configurações de Autenticação**: Configurações para NextAuth, como chaves secretas e URL do servidor de autenticação.
 
 ## Instalação e Configuração
 
-Explique os passos para instalar e configurar o projeto:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/seu-projeto.git
