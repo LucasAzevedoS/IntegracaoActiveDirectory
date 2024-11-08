@@ -1,12 +1,12 @@
 namespace GerenciadoraAD.Services.GlobalVariables
 {
     /// <summary>
-    /// Variáveis globais
+    /// VariÃ¡veis globais
     /// </summary>
     public static class Globals
     {
         /// <summary>
-        /// Configurações do servidor LDAP
+        /// ConfiguraÃ§Ãµes do servidor LDAP
         /// </summary>
         public static LdapServer? ServidorLdap;
 
@@ -16,12 +16,12 @@ namespace GerenciadoraAD.Services.GlobalVariables
         public static void SetServidorLdap()
         {
             ServidorLdap = new LdapServer(
-                389,
-                "LOCAL",
-                "TESTEDC",
-                "svc.ldap.br",
-                "agomod@22",
-                "dd-teste-grupo");
+                111,
+                "**********",
+                "**********",
+                "**********",
+                "**********",
+                "**********");
         }
     }
 }
